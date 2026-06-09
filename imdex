@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoldTech – Phân Bón Hữu Cơ Sinh Học | High-Tech Organic Bio-Fertilizer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-deep: #0b331a;
+  --green-mid: #165231;
+  --green-light: #2e8b57;
+  --gold: #c9a227;
+  --gold-light: #f3df7a;
+  --cream: #f7f5ef;
+  --white: #ffffff;
+  --gray-100: #f4f5f7;
+  --gray-300: #d1d5db;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.04);
+  --shadow-md: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-lg: 0 20px 50px rgba(11,51,26,.15);
+  --radius: 12px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--gray-900); background: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* ── MULTI-LANGUAGE DECORATOR ── */
+[lang-vi], [lang-en] { display: none; }
+body.vi [lang-vi] { display: block; }
+body.vi [lang-vi-inline] { display: inline; }
+body.en [lang-en] { display: block; }
+body.en [lang-en-inline] { display: inline; }
+body.vi [lang-en-inline], body.en [lang-vi-inline] { display: none; }
+span[lang-vi], span[lang-en] { display: inline; }
+
+/* ── NAVIGATION FIXED BAR ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(11, 51, 26, 0.95); backdrop-filter: blur(12px);
+  padding: 0 5%; height: 76px; display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 4px 30px rgba(0,0,0,.15); border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-logo img { height: 46px; width: auto; object-fit: contain; }
+.nav-logo-text { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; font-family: 'Inter', sans-serif; }
+.nav-logo-text span:first-child { color: var(--gold); }
+.nav-logo-text span:last-child { color: var(--white); }
+
+.nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,.8); text-decoration: none; font-size: .9rem; font-weight: 500; transition: var(--transition); padding: 6px 0; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: var(--transition); }
+.nav-links a:hover { color: var(--gold-light); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.lang-toggle { display: flex; border: 1.5px solid rgba(255,255,255,.25); border-radius: 30px; overflow: hidden; padding: 2px; background: rgba(0,0,0,0.2); }
+.lang-btn { padding: 6px 14px; font-size: .75rem; font-weight: 700; cursor: pointer; border: none; background: transparent; color: rgba(255,255,255,.5); border-radius: 20px; transition: var(--transition); }
+.lang-btn.active { background: var(--gold); color: var(--green-deep); box-shadow: var(--shadow-sm); }
+.nav-cta { background: var(--gold); color: var(--green-deep); padding: 10px 22px; border-radius: 8px; font-weight: 700; font-size: .85rem; text-decoration: none; transition: var(--transition); }
+.nav-cta:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,39,.4); }
+
+/* MOBILE HAMBURGER */
+.menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: pointer; background: transparent; border: none; z-index: 1001; }
+.menu-toggle span { display: block; width: 28px; height: 3px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+.menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+
+/* ── HERO BANNER SECTION ── */
+.hero {
+  min-height: 100vh; padding-top: 76px; display: flex; align-items: center; position: relative; overflow: hidden;
+  background: linear-gradient(145deg, #072211 0%, #0f3d22 50%, #1a5633 100%);
+}
+.hero-bg-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; pointer-events: none; }
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M40 40v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-40V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 40v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; padding: 60px 5%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; width: 100%; position: relative; z-index: 2; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,162,39,.12); border: 1px solid rgba(201,162,39,.35); color: var(--gold-light); padding: 8px 18px; border-radius: 30px; font-size: .8rem; font-weight: 600; margin-bottom: 24px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 3.8rem; line-height: 1.15; color: var(--white); margin-bottom: 18px; font-weight: 800; }
+.hero h1 .gold { color: var(--gold-light); background: linear-gradient(125deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-sub { font-size: 1.1rem; color: rgba(255,255,255,.75); line-height: 1.75; margin-bottom: 36px; max-width: 580px; font-weight: 300; }
+.hero-stats { display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; }
+.stat-item { text-align: left; }
+.stat-num { font-size: 2.2rem; font-weight: 800; color: var(--gold-light); line-height: 1; letter-spacing: -1px; }
+.stat-label { font-size: .78rem; color: rgba(255,255,255,.5); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary { background: var(--gold); color: var(--green-deep); padding: 16px 32px; border-radius: 10px; font-weight: 700; font-size: .95rem; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(201,162,39,0.2); }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(201,162,39,.4); }
+.btn-outline { border: 2px solid rgba(255,255,255,.3); color: var(--white); padding: 16px 32px; border-radius: 10px; font-weight: 600; font-size: .95rem; text-decoration: none; transition: var(--transition); display: inline-flex; align-items: center; gap: 10px; }
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,.08); transform: translateY(-2px); }
+
+.hero-product { position: relative; display: flex; justify-content: center; align-items: center; }
+.product-glow { width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(46,139,87,.25) 0%, transparent 70%); position: absolute; filter: blur(20px); }
+.product-card { background: rgba(255,255,255,.07); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,.18); border-radius: 32px; padding: 40px 32px; text-align: center; position: relative; z-index: 1; width: 100%; max-width: 360px; box-shadow: var(--shadow-lg); transition: var(--transition); }
+.product-card:hover { transform: translateY(-5px); border-color: rgba(201,162,39,0.4); }
+.product-image-container { width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; border-radius: 16px; background: rgba(0,0,0,0.15); overflow: hidden; position: relative; }
+.product-image-container img { max-height: 90%; max-width: 90%; object-fit: contain; z-index: 2; }
+.product-image-container::before { content: 'GOLDTECH G05'; position: absolute; font-size: 2.5rem; font-weight: 900; color: rgba(255,255,255,0.03); z-index: 1; letter-spacing: 2px; }
+.product-name { font-size: 2.2rem; font-weight: 900; color: var(--gold-light); line-height: 1.2; margin-bottom: 4px; }
+.product-subtitle { color: rgba(255,255,255,.7); font-size:.9rem; margin-bottom: 18px; font-weight: 400; }
+.product-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 22px; }
+.product-tags .tag { background: rgba(46,139,87,.25); border: 1px solid rgba(46,139,87,.4); color: #8eeebb; padding: 4px 10px; border-radius: 8px; font-size: .7rem; font-weight: 600; text-transform: uppercase; }
+.product-price { font-size: 1.8rem; font-weight: 800; color: var(--gold-light); letter-spacing: -0.5px; }
+.product-price-label { font-size: .8rem; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+/* ── VALUE STRIP BAR ── */
+.intro-strip { background: var(--green-deep); padding: 44px 5%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.intro-strip-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; text-align: center; }
+.intro-item { color: var(--white); display: flex; flex-direction: column; align-items: center; position: relative; }
+.intro-item:not(:last-child)::after { content: ''; position: absolute; right: -12px; top: 15%; height: 70%; width: 1px; background: rgba(255,255,255,0.1); }
+.intro-item-icon { width: 44px; height: 44px; fill: var(--gold); margin-bottom: 12px; background: rgba(255,255,255,0.04); padding: 10px; border-radius: 50%; }
+.intro-item-num { font-size: 2rem; font-weight: 800; color: var(--gold-light); line-height: 1.2; }
+.intro-item-text { font-size: .82rem; color: rgba(255,255,255,.6); margin-top: 6px; font-weight: 400; line-height: 1.4; }
+
+/* ── GLOBAL SECTIONS LAYOUT ── */
+section { padding: 100px 5%; position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-light); margin-bottom: 16px; }
+.section-eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--green-light); display: inline-block; }
+h2.section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 800; color: var(--green-deep); line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
+.section-desc { font-size: 1.1rem; color: var(--gray-600); line-height: 1.8; max-width: 720px; font-weight: 400; margin-bottom: 40px; }
+
+/* ── ABOUT & VISION SECTION ── */
+.about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
+.about-text p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.85; margin-bottom: 20px; text-align: justify; }
+.about-text strong { color: var(--green-deep); font-weight: 700; }
+.mission-boxes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+.mission-box { padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow-md); transition: var(--transition); }
+.mission-box:hover { transform: translateY(-4px); }
+.mission-box.green { background: var(--green-deep); color: var(--white); }
+.mission-box.gold { background: var(--gold); color: var(--green-deep); }
+.mission-box h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 10px; }
+.mission-box h3 svg { width: 24px; height: 24px; fill: currentColor; }
+.mission-box p { font-size: .92rem; line-height: 1.7; opacity: .9; font-weight: 400; }
+
+.values-grid { display: flex; flex-direction: column; gap: 20px; }
+.value-card { background: var(--white); border-radius: var(--radius); padding: 28px; border-left: 5px solid var(--green-light); box-shadow: var(--shadow-sm); transition: var(--transition); }
+.value-card:hover { transform: translateX(6px); box-shadow: var(--shadow-md); border-left-color: var(--gold); }
+.value-card h4 { font-size: 1.1rem; font-weight: 700; color: var(--green-deep); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+.value-card h4 svg { width: 24px; height: 24px; fill: var(--green-mid); }
+.value-card p { font-size: .92rem; color: var(--gray-600); line-height: 1.65; }
+
+/* ── MANUFACTURING TECHNOLOGY ── */
+.tech { background: var(--white); }
+.tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 20px; }
+.tech-card { background: var(--cream); border-radius: var(--radius-lg); padding: 40px 32px; position: relative; overflow: hidden; transition: var(--transition); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.02); }
+.tech-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.tech-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; }
+.tech-card.nano::before { background: linear-gradient(90deg, #2d7a4f, #4caf74); }
+.tech-card.bio::before { background: linear-gradient(90deg, #c9a227, #f0c040); }
+.tech-card.eco::before { background: linear-gradient(90deg, #1e40af, #3b82f6); }
+.tech-icon-wrap { width: 60px; height: 60px; border-radius: 16px; background: var(--white); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; box-shadow: var(--shadow-sm); }
+.tech-icon-wrap svg { width: 32px; height: 32px; }
+.tech-card.nano svg { fill: var(--green-mid); }
+.tech-card.bio svg { fill: var(--gold); }
+.tech-card.eco svg { fill: #1e40af; }
+.tech-card h3 { font-size: 1.3rem; font-weight: 700; color: var(--green-deep); margin-bottom: 16px; }
+.tech-card ul { list-style: none; padding: 0; }
+.tech-card ul li { font-size: .9rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 12px; padding-left: 22px; position: relative; text-align: justify; }
+.tech-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--green-light); font-weight: 700; }
+
+/* ── CORE ADVANTAGES ── */
+.advantages { background: linear-gradient(145deg, #072211, #0f361d); color: var(--white); }
+.advantages h2.section-title { color: var(--white); }
+.advantages .section-eyebrow { color: var(--gold-light); }
+.advantages .section-eyebrow::before { background: var(--gold-light); }
+.advantages .section-desc { color: rgba(255,255,255,0.7); }
+.adv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.adv-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); padding: 32px; transition: var(--transition); }
+.adv-card:hover { background: rgba(255,255,255,.08); border-color: rgba(201,162,39,0.3); transform: translateY(-4px); }
+.adv-card h4 { font-size: 1.15rem; font-weight: 700; color: var(--gold-light); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.adv-card h4 svg { width: 24px; height: 24px; fill: var(--gold-light); }
+.adv-card ul { list-style: none; }
+.adv-card ul li { font-size: .92rem; color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 10px; padding-left: 24px; position: relative; }
+.adv-card ul li::before { content: '✓'; position: absolute; left: 0; color: #5cdb95; font-weight: 700; }
+
+/* ── PRODUCTS GRID SECTION ── */
+.products-section { background: var(--white); }
+.products-showcase { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.prod-item-card { background: var(--cream); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(0,0,0,0.03); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: var(--transition); }
+.prod-item-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: rgba(46,139,87,0.2); }
+.prod-img-box { width: 100%; height: 240px; background: rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.prod-img-box img { max-height: 85%; max-width: 85%; object-fit: contain; }
+.prod-img-placeholder { position: absolute; font-size: 0.8rem; font-weight: 600; color: var(--gray-600); background: rgba(255,255,255,0.8); padding: 4px 10px; border-radius: 4px; bottom: 10px; border: 1px dashed var(--gray-300); }
+.prod-details { padding: 28px; flex-grow: 1; display: flex; flex-direction: column; }
+.prod-code-tag { font-size: .72rem; font-weight: 700; color: var(--gold); background: rgba(201,162,39,0.1); padding: 4px 10px; border-radius: 6px; align-self: flex-start; margin-bottom: 12px; letter-spacing: 0.5px; }
+.prod-details h4 { font-size: 1.25rem; font-weight: 700; color: var(--green-deep); margin-bottom: 10px; }
+.prod-comp { font-size: .85rem; color: var(--gray-600); line-height: 1.65; text-align: justify; }
+
+/* ── FACTORY OVERVIEW ── */
+.factory { background: var(--cream); }
+.factory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.factory-text p { font-size: 1.05rem; color: var(--gray-600); line-height: 1.85; margin-bottom: 18px; text-align: justify; }
+.factory-text strong { color: var(--green-deep); font-weight: 700; }
+.factory-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); height: 380px; background: var(--green-deep); display: flex; align-items: center; justify-content: center; }
+.factory-img-wrap img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+.factory-img-placeholder { position: absolute; color: var(--white); font-weight: 500; font-size: 0.95rem; border: 1px dashed rgba(255,255,255,0.4); padding: 12px 24px; border-radius: 8px; background: rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
+.factory-specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 36px; }
+.spec-box { background: var(--white); border-radius: var(--radius); padding: 24px 16px; text-align: center; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.02); transition: var(--transition); }
+.spec-box:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.spec-box .spec-val { font-size: 1.8rem; font-weight: 800; color: var(--green-deep); letter-spacing: -0.5px; }
+.spec-box .spec-key { font-size: .75rem; color: var(--gray-600); margin-top: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── LEGAL CERTIFICATIONS ── */
+.certs { background: var(--white); }
+.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.cert-card { background: var(--cream); border: 2px solid var(--gray-300); border-radius: var(--radius); padding: 32px 24px; text-align: center; transition: var(--transition); display: flex; flex-direction: column; align-items: center; }
+.cert-card:hover { border-color: var(--green-light); box-shadow: var(--shadow-md); transform: translateY(-4px); background: var(--white); }
+.cert-icon-wrap { width: 54px; height: 54px; margin-bottom: 16px; fill: var(--green-mid); display: flex; align-items: center; justify-content: center; }
+.cert-card h4 { font-size: 1rem; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; line-height: 1.4; min-height: 44px; display: flex; align-items: center; }
+.cert-card p { font-size: .82rem; color: var(--gray-600); line-height: 1.6; flex-grow: 1; text-align: center; }
+.cert-badge { display: inline-block; background: var(--green-deep); color: var(--white); font-size: .68rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-top: 14px; letter-spacing: 0.5px; }
+
+/* ── EXPERIMENTAL ECO RESULTS ── */
+.results { background: var(--cream); }
+.results-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; border-bottom: 2px solid var(--gray-300); padding-bottom: 16px; }
+.tab-btn { padding: 10px 20px; border-radius: 8px; font-size: .85rem; font-weight: 600; cursor: pointer; border: 1px solid var(--gray-300); background: var(--white); color: var(--gray-600); transition: var(--transition); }
+.tab-btn:hover { border-color: var(--green-mid); color: var(--green-mid); }
+.tab-btn.active { background: var(--green-deep); color: var(--white); border-color: var(--green-deep); box-shadow: var(--shadow-sm); }
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+.result-table-wrap { overflow-x: auto; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--gray-300); }
+table { width: 100%; border-collapse: collapse; background: var(--white); font-size: .88rem; min-width: 600px; }
+thead { background: var(--green-deep); color: var(--white); }
+thead th { padding: 16px; text-align: left; font-weight: 600; font-size: .9rem; border-bottom: 2px solid rgba(0,0,0,0.1); }
+tbody tr { border-bottom: 1px solid var(--gray-300); transition: var(--transition); }
+tbody tr:nth-child(even) { background: var(--gray-100); }
+tbody tr:hover { background: rgba(46,139,87,.08); }
+tbody td { padding: 14px 16px; color: var(--gray-900); font-weight: 400; }
+tbody td.highlight { font-weight: 700; color: var(--green-mid); font-size: 0.95rem; }
+tbody td.gold-text { font-weight: 700; color: #b58d15; }
+.result-note { margin-top: 24px; background: var(--green-deep); border-radius: var(--radius); padding: 24px 32px; color: var(--white); border-left: 6px solid var(--gold); box-shadow: var(--shadow-sm); }
+.result-note p { font-size: .95rem; line-height: 1.7; font-style: italic; opacity: .95; font-weight: 300; }
+.result-note strong { color: var(--gold-light); font-style: normal; font-weight: 700; }
+
+/* ── INTERNATIONAL TRIALS ── */
+.international { background: var(--white); }
+.intl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.intl-card { border: 1px solid var(--gray-300); background: var(--cream); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); display: flex; flex-direction: column; }
+.intl-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(46,139,87,0.2); }
+.intl-header { background: var(--green-deep); padding: 22px; color: var(--white); border-bottom: 3px solid var(--gold); }
+.intl-header h4 { font-size: 1.05rem; font-weight: 700; letter-spacing: -0.2px; }
+.intl-header span { font-size: .78rem; opacity: .75; margin-top: 4px; display: block; text-transform: uppercase; font-weight: 500; }
+.intl-body { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.intl-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: .88rem; }
+.intl-row:last-of-type { border-bottom: none; }
+.intl-row .label { color: var(--gray-600); }
+.intl-row .value { font-weight: 700; color: var(--green-deep); }
+.intl-outcome { background: var(--white); padding: 18px; border-radius: var(--radius); border: 1px solid var(--gray-300); font-size: .85rem; color: var(--gray-600); line-height: 1.6; font-style: italic; text-align: justify; margin-top: 12px; }
+
+/* ── INTERACTIVE CONTACT COMPONENT ── */
+.contact { background: var(--green-deep); color: var(--white); }
+.contact h2.section-title { color: var(--white); }
+.contact .section-eyebrow { color: var(--gold-light); }
+.contact .section-eyebrow::before { background: var(--gold-light); }
+.contact .section-desc { color: rgba(255,255,255,0.7); }
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; }
+.contact-info { color: rgba(255,255,255,.85); }
+.contact-item { display: flex; gap: 20px; margin-bottom: 32px; align-items: flex-start; }
+.contact-item-icon-wrap { width: 48px; height: 48px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; fill: var(--gold-light); flex-shrink: 0; }
+.contact-item-icon-wrap svg { width: 22px; height: 22px; }
+.contact-item-text h4 { font-size: .82rem; font-weight: 700; color: var(--gold-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.contact-item-text p { font-size: .95rem; line-height: 1.6; font-weight: 300; }
+.contact-form { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-lg); }
+.contact-form h3 { color: var(--white); font-size: 1.3rem; margin-bottom: 24px; font-weight: 700; }
+.form-row { margin-bottom: 20px; }
+.form-row label { display: block; font-size: .8rem; font-weight: 600; color: rgba(255,255,255,.75); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-row input, .form-row textarea, .form-row select { width: 100%; background: rgba(0,0,0,.2); border: 1.5px solid rgba(255,255,255,.15); border-radius: 8px; padding: 14px 18px; color: var(--white); font-size: .92rem; font-family: inherit; transition: var(--transition); outline: none; }
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus { border-color: var(--gold-light); background: rgba(0,0,0,0.3); box-shadow: 0 0 10px rgba(243,223,122,0.1); }
+.form-row textarea { height: 130px; resize: vertical; }
+.form-row select option { background: var(--green-deep); color: var(--white); }
+.form-submit { width: 100%; background: var(--gold); color: var(--green-deep); padding: 16px; border: none; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: var(--transition); font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.form-submit:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,162,39,0.3); }
+
+/* ── FOOTER SYSTEM ── */
+footer { background: #05180c; padding: 60px 5% 30px; display: flex; flex-direction: column; align-items: center; text-align: center; border-top: 1px solid rgba(255,255,255,0.04); }
+.footer-logo { font-size: 2rem; font-weight: 900; margin-bottom: 12px; letter-spacing: -0.5px; }
+.footer-logo span:first-child { color: var(--gold); }
+.footer-logo span:last-child { color: var(--white); }
+.footer-tagline { color: rgba(255,255,255,.5); font-size: .9rem; margin-bottom: 28px; font-weight: 300; max-width: 600px; }
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; margin-bottom: 32px; list-style: none; }
+.footer-links a { color: rgba(255,255,255,.45); text-decoration: none; font-size: .88rem; transition: var(--transition); font-weight: 500; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.06); padding-top: 24px; color: rgba(255,255,255,.3); font-size: .8rem; width: 100%; text-align: center; line-height: 1.6; font-weight: 400; }
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── RESPONSIVE ADAPTATION ── */
+@media (max-width: 1024px) {
+  .hero-inner, .about-grid, .factory-grid, .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+  .hero { text-align: center; min-height: auto; padding-top: 120px; padding-bottom: 60px; }
+  .hero h1 { font-size: 3rem; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-stats, .hero-btns { justify-content: center; }
+  .hero-product { order: -1; margin-bottom: 20px; }
+  .tech-grid, .products-showcase, .certs-grid, .intl-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .intro-strip-inner { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .intro-item:nth-child(3)::after, .intro-item:nth-child(5)::after { display: none; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; background: var(--green-deep); flex-direction: column; padding: 30px; gap: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .nav-links.open { display: flex; }
+  .menu-toggle { display: flex; }
+  .tech-grid, .products-showcase, .certs-grid, .intl-grid, .intro-strip-inner, .mission-boxes, .adv-grid { grid-template-columns: 1fr; }
+  .intro-item::after { display: none !important; }
+  h2.section-title { font-size: 2.2rem; }
+  .contact-form { padding: 28px 20px; }
+}
+</style>
+</head>
+<body class="vi">
+
+<nav>
+  <a class="nav-logo" href="#hero">
+    <div class="nav-logo-text"><span>GOLD</span><span>TECH</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="toggleMenu()"><span lang-vi>Giới thiệu</span><span lang-en>About</span></a></li>
+    <li><a href="#technology" onclick="toggleMenu()"><span lang-vi>Công nghệ</span><span lang-en>Technology</span></a></li>
+    <li><a href="#products" onclick="toggleMenu()"><span lang-vi>Sản phẩm</span><span lang-en>Products</span></a></li>
+    <li><a href="#factory" onclick="toggleMenu()"><span lang-vi>Nhà máy</span><span lang-en>Factory</span></a></li>
+    <li><a href="#certifications" onclick="toggleMenu()"><span lang-vi>Pháp lý</span><span lang-en>Credentials</span></a></li>
+    <li><a href="#results" onclick="toggleMenu()"><span lang-vi>Kết quả</span><span lang-en>Results</span></a></li>
+    <li><a href="#contact" onclick="toggleMenu()"><span lang-vi>Liên hệ</span><span lang-en>Contact</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnVi" onclick="setLang('vi')">VI</button>
+      <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    </div>
+    <a class="nav-cta" href="#contact">
+      <span lang-vi>Liên hệ</span><span lang-en>Contact</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <img class="hero-bg-image" src="images/hero-bg.jpg" alt="High Tech Agriculture Background">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span lang-vi>Phân Bón Hữu Cơ Sinh Học Hàng Đầu Việt Nam</span>
+        <span lang-en>Vietnam's Leading High-Tech Organic Bio-Fertilizer</span>
+      </div>
+      <h1>
+        <span lang-vi>Nuôi dưỡng đất – <br><span class="gold">Nâng tầm</span> nông nghiệp</span>
+        <span lang-en>Nourishing Soil – <br><span class="gold">Elevating</span> Agriculture</span>
+      </h1>
+      <p class="hero-sub">
+        <span lang-vi>Công ty TNHH Phân Bón Hữu Cơ Quốc Tế GoldTech ứng dụng công nghệ đột phá Nano, Sinh học tiên tiến và Đất hiếm tế bào gốc, mang lại giải pháp dinh dưỡng xuất sắc cho kỷ nguyên nông nghiệp xanh bền vững.</span>
+        <span lang-en>GoldTech International Organic Fertilizer Co., Ltd applies pioneering Nano, advanced Bio-technology, and rare earth stem cells, delivering outstanding nutritional solutions for sustainable green agriculture.</span>
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-target="2013">2013</div>
+          <div class="stat-label"><span lang-vi>Thành lập</span><span lang-en>Established</span></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="1.5">1.5M</div>
+          <div class="stat-label"><span lang-vi>Lít / Năm</span><span lang-en>Litres / Year</span></div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">ISO</div>
+          <div class="stat-label">9001:2015</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="7">7+</div>
+          <div class="stat-label"><span lang-vi>Nhóm cây trồng</span><span lang-en>Crop Categories</span></div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#technology">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          <span lang-vi>Khám phá công nghệ</span><span lang-en>Explore Technology</span>
+        </a>
+        <a class="btn-outline" href="#results">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/></svg>
+          <span lang-vi>Kết quả thực tế</span><span lang-en>Empirical Results</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-product">
+      <div class="product-glow"></div>
+      <div class="product-card">
+        <div class="product-image-container">
+          <img src="images/products/g05.png" alt="GoldTech G05 Product Bottle">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: G05 (100ml)</span><span lang-en>Image: G05 (100ml)</span></div>
+        </div>
+        <div class="product-name">G05</div>
+        <div class="product-subtitle">
+          <span lang-vi>Phân Bón Lá Hữu Cơ Sinh Học</span>
+          <span lang-en>Organic Bio Foliar Fertilizer</span>
+        </div>
+        <div class="product-tags">
+          <span class="tag">Nano Tech</span>
+          <span class="tag">Bio-Active</span>
+          <span class="tag">ISO 9001</span>
+        </div>
+        <div class="product-price">450.000 ₫</div>
+        <div class="product-price-label">
+          <span lang-vi>/ chai 100ml (Hồ sơ gốc)</span><span lang-en>/ 100ml bottle (Official profile)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="intro-strip">
+  <div class="intro-strip-inner">
+    <div class="intro-item">
+      <svg class="intro-item-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
+      <div class="intro-item-num" data-target="1500000">1,500,000</div>
+      <div class="intro-item-text"><span lang-vi>Lít phân bón / năm công suất</span><span lang-en>Liters of fertilizer / year capacity</span></div>
+    </div>
+    <div class="intro-item">
+      <svg class="intro-item-icon" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+      <div class="intro-item-num" data-target="1056">1,056</div>
+      <div class="intro-item-text"><span lang-vi>Tấn / năm chế phẩm BVTV sinh học</span><span lang-en>Tons / year bio crop protection agent</span></div>
+    </div>
+    <div class="intro-item">
+      <svg class="intro-item-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      <div class="intro-item-num">Global</div>
+      <div class="intro-item-text"><span lang-vi>Xuất khẩu & Khảo nghiệm Indonesia</span><span lang-en>Export & Empirical trials in Indonesia</span></div>
+    </div>
+    <div class="intro-item">
+      <svg class="intro-item-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <div class="intro-item-num">ISO 9001</div>
+      <div class="intro-item-text"><span lang-vi>Quản lý chất lượng quốc tế</span><span lang-en>International Quality Certified</span></div>
+    </div>
+    <div class="intro-item">
+      <svg class="intro-item-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+      <div class="intro-item-num">Nano+Bio</div>
+      <div class="intro-item-text"><span lang-vi>Tích hợp Đất hiếm & Tế bào gốc</span><span lang-en>Rare Earth & Stem Cell Integrated</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-eyebrow">
+          <span lang-vi>Hồ sơ doanh nghiệp</span><span lang-en>Corporate Profile</span>
+        </div>
+        <h2 class="section-title">
+          <span lang-vi>Công ty TNHH Phân Bón Hữu Cơ Quốc Tế <span class="gold">GoldTech</span></span>
+          <span lang-en>GoldTech International Organic Fertilizer Co., Ltd</span>
+        </h2>
+        <div lang-vi>
+          <p>GoldTech tự hào là <strong>đơn vị tiên phong</strong> độc quyền trong việc ứng dụng tinh hoa khoa học hiện đại thế kỷ 21 vào nền nông nghiệp sinh thái. Chúng tôi kết hợp đồng bộ công nghệ Nano cao cấp, công nghệ sinh học vi sinh và hợp chất đất hiếm tế bào gốc để sản xuất phân bón công nghệ cao đột phá.</p>
+          <p>Sở hữu đội ngũ giáo sư, tiến sĩ đầu ngành cùng hội đồng quản trị năng động, nhạy bén đột phá, GoldTech cam kết cung cấp giải pháp dinh dưỡng hữu cơ sinh học với <strong>chất lượng thượng hạng và dịch vụ tư vấn hàng đầu Việt Nam</strong>.</p>
+          <p>Hệ sản phẩm của GoldTech cam kết an toàn tuyệt đối cho sức khỏe con người, không để lại dư lượng độc hại, bảo vệ nghiêm ngặt môi trường sinh thái sinh học và thiết lập lại <strong>trạng thái cân bằng hữu cơ bền vững</strong> cho đất mẹ canh tác.</p>
+        </div>
+        <div lang-en>
+          <p>GoldTech is a recognized <strong>pioneer</strong> in integrating 21st-century state-of-the-art scientific technologies into ecological farming, combining high-grade nano-engineering, biochemistry, and rare earth stem cell formulas for breakthrough fertilizer yields.</p>
+          <p>Backed by a distinguished council of leading professors and research PhDs combined with visionary management, GoldTech delivers premium high-tech organic bio-fertilizers with <strong>uncompromised quality and elite agronomic services in Vietnam</strong>.</p>
+          <p>Our product biosphere guarantees zero toxicity to human health, leaves no residual pollutants, strictly preserves macro ecosystems, and revives the <strong>sustainable organic equilibrium</strong> of cultivated soils.</p>
+        </div>
+        <div class="mission-boxes">
+          <div class="mission-box green">
+            <h3>
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <span lang-vi>Tầm nhìn</span><span lang-en>Vision</span>
+            </h3>
+            <p lang-vi>Xây dựng vị thế tập đoàn công nghệ nông nghiệp hàng đầu, tiên phong cung cấp giải pháp sinh học an toàn, toàn diện – nâng tầm vị thế nông sản sạch Việt Nam trên đấu trường quốc tế.</p>
+            <p lang-en>To orchestrate an elite high-tech agritech ecosystem, pioneering safe and total bio-solutions that elevate the global pedigree of Vietnamese clean organic agricultural exports.</p>
+          </div>
+          <div class="mission-box gold">
+            <h3>
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
+              <span lang-vi>Sứ mệnh</span><span lang-en>Mission</span>
+            </h3>
+            <p lang-vi>Cung ứng nguồn dinh dưỡng sinh học hữu cơ tinh khiết thông qua dây chuyền tự động hóa cao, mang lại hiệu suất vượt bậc về sản lượng, tối ưu hóa chi phí và kiến tạo hệ sinh thái bền vững.</p>
+            <p lang-en>To synthesize pristine bio-organic nutrition through hyper-automated operations, driving massive structural yields, eliminating chemical overheads, and safeguarding our shared biome.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="values-grid">
+          <div class="value-card">
+            <h4>
+              <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+              <span lang-vi>Chất lượng thượng hạng</span><span lang-en>Premium Quality Core</span>
+            </h4>
+            <p lang-vi>Mọi lô sản phẩm ra xưởng đều phải đạt chuẩn kiểm định nghiêm ngặt của Bộ Khoa học và Công nghệ, mang lại sự hài lòng và giá trị thặng dư tối đa cho nhà phân phối và bà con nông dân.</p>
+            <p lang-en>Every production run complies with stringent Ministry of Science and Technology verification protocols, creating optimized economic margins for global distributors and farmers.</p>
+          </div>
+          <div class="value-card">
+            <h4>
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span lang-vi>Khách hàng là trọng tâm</span><span lang-en>Customer-Centricity</span>
+            </h4>
+            <p lang-vi>Lắng nghe hơi thở của đất và tâm nguyện của nhà nông. Chúng tôi lấy hiệu quả kinh tế thực tế trên những cánh đồng làm kim chỉ nam đo lường sự thành công của doanh nghiệp.</p>
+            <p lang-en>Attuned to soil dynamics and farmers' constraints. We prioritize field profitability and capital retention as our definitive corporate performance index.</p>
+          </div>
+          <div class="value-card">
+            <h4>
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              <span lang-vi>Sáng tạo R&D liên tục</span><span lang-en>Continuous R&D Innovation</span>
+            </h4>
+            <p lang-vi>Thấu hiểu sâu sắc đặc tính thổ nhưỡng lưu vực sông Hồng, sông Cửu Long và quốc tế, GoldTech liên tục đổi mới, nâng cấp công thức vi lượng dồi dào, đón đầu xu thế nông nghiệp xanh.</p>
+            <p lang-en>Deeply cognizant of regional and international soil properties, GoldTech continuously upgrades micronutrient ratios, steering advanced bio-organic development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech" id="technology">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Nền tảng công nghệ</span><span lang-en>Technological Foundation</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Ba cốt lõi khoa học đột phá của <span style="color:var(--green-mid)">GoldTech</span></span>
+        <span lang-en>Three Scientific Pillars of <span style="color:var(--green-mid)">GoldTech</span> Innovation</span>
+      </h2>
+      <p class="section-desc">
+        <span lang-vi>Sự giao thoa độc quyền giữa kỹ thuật vật lý Nano siêu cấu trúc, công nghệ vi sinh hữu cơ sinh học và hợp chất đất hiếm thúc đẩy cây trồng hấp thụ dinh dưỡng tế bào, kháng bệnh chủ động.</span>
+        <span lang-en>The exclusive intersection of micro-structural Nano physics, bio-organic cellular micro-biology, and rare earth blends driving hyper-fast nutrient assimilation and autonomic immune defense.</span>
+      </p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card nano reveal">
+        <div class="tech-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M4.5 10.5C3.67 10.5 3 11.17 3 12s.67 1.5 1.5 1.5S6 12.83 6 12s-.67-1.5-1.5-1.5zM10.5 4.5C10.5 3.67 11.17 3 12 3s1.5.67 1.5 1.5S12.83 6 12 6s-1.5-.67-1.5-1.5zM19.5 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM10.5 19.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+        </div>
+        <h3><span lang-vi>Công nghệ Vật lý Nano</span><span lang-en>Advanced Nano Engineering</span></h3>
+        <ul>
+          <li lang-vi>Các hạt nguyên tố vi lượng được cắt nhỏ về kích thước nanomet, loại bỏ hoàn toàn tạp chất cản trở, gia tăng tỷ lệ hấp thụ lên tới 98%.</li>
+          <li lang-en>Trace minerals engineered down to nanometer scale, completely eradicating structural blockages to elevate plant assimilation ratios up to 98%.</li>
+          <li lang-vi>Cơ chế thẩm thấu trực tiếp qua biểu bì lá, vách thân cành, bỏ qua quá trình chuyển hóa chậm ở rễ, mang lại hiệu ứng sinh học tức thì.</li>
+          <li lang-en>Direct absorption mechanics via leaf cuticles and stem walls bypass slow soil root metabolism, triggering instantaneous biological responses.</li>
+          <li lang-vi>Phức hợp Nano Đồng, Nano Bạc và Nano Silica thiết lập màng bảo vệ cô lập nấm bệnh, vi khuẩn có hại, tiết giảm tối đa thuốc BVTV hóa học.</li>
+          <li lang-en>Nano Copper, Silver, and Silica particles form a defensive bio-shield that isolates fungal pathogens and harmful bacteria, minimizing chemical inputs.</li>
+        </ul>
+      </div>
+      <div class="tech-card bio reveal">
+        <div class="tech-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.22 19.58 10.57 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        </div>
+        <h3><span lang-vi>Sinh học & Tế bào gốc</span><span lang-en>Biotech & Rare Earth Catalyst</span></h3>
+        <ul>
+          <li lang-vi>Ứng dụng đất hiếm và tế bào gốc thực vật, hòa trộn cùng tinh dầu hữu cơ tự nhiên cao cấp được chiết xuất từ quả neem, dừa, ô-liu.</li>
+          <li lang-en>Implements rare-earth trace matrices and plant stem cell activators blended with premium organic essential oils (Neem, Coconut, Olive).</li>
+          <li lang-vi>Hàm lượng hoạt chất β-carotene dồi dào gia tốc tiến trình tái cấu trúc tế bào, tổng hợp vitamin nội sinh, tăng đề kháng thực vật.</li>
+          <li lang-en>Enriched active β-carotene compounds accelerate cellular remodeling, trigger internal vitamin synthesis, and optimize plant immunity.</li>
+          <li lang-vi>Tích hợp tinh dầu quế, sả, bạc hà cô đặc có đặc tính xua đuổi mạnh mẽ các loại côn trùng, chích hút hại lá và quả.</li>
+          <li lang-en>Concentrated essential oils of Cinnamon, Lemongrass, and Peppermint create a highly potent repellent barrier against chewing and sucking insects.</li>
+        </ul>
+      </div>
+      <div class="tech-card eco reveal">
+        <div class="tech-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        <h3><span lang-vi>Phục hồi & Bảo vệ môi trường</span><span lang-en>Ecological Soil Restoration</span></h3>
+        <ul>
+          <li lang-vi>Cam kết không chứa dư lượng độc hại, bảo vệ an toàn cho sức khỏe người lao động trực tiếp bón phân và thu hoạch nông sản.</li>
+          <li lang-en>Zero chemical toxicities guaranteed, ensuring total occupational safety for farming labor during spraying and harvesting.</li>
+          <li lang-vi>Ngăn chặn triệt để hiện tượng chai cứng đất mặt, không gây chua hóa hay thoái hóa lý tính đất như phân hóa học truyền thống.</li>
+          <li lang-en>Halts topsoil hardening, eliminating the chronic acidification and physical soil degradation patterns induced by synthetic salts.</li>
+          <li lang-vi>Tăng cường mạnh mẽ độ phì nhiêu, tái lập hệ vi sinh vật có lợi đối với đất nghèo kiệt dinh dưỡng, đất cát ven biển và sa mạc hóa.</li>
+          <li lang-en>Significantly drives organic matter accumulation and balances microflora profiles in depleted terrains, sands, and desertified soils.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advantages" id="advantages">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Lợi ích kinh tế cốt lõi</span><span lang-en>Core Economic Value</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>4 Lợi thế vượt trội được kiểm chứng của GoldTech</span>
+        <span lang-en>4 Verified Strategic Advantages of GoldTech Solutions</span>
+      </h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card reveal">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.7 3.1 5.52l.34 3.69L1 12l2.44 2.79-.34 3.69 3.61.82 1.89 3.2 3.4-1.46 3.4 1.46 1.89-3.2 3.61-.82-.34-3.69L23 12zm-13 5l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <span lang-vi>Giải độc & Cải tạo kết cấu đất sâu</span><span lang-en>Detoxification & Deep Soil Engineering</span>
+        </h4>
+        <ul>
+          <li lang-vi>Bẻ gãy liên kết kim loại nặng, giải phóng keo đất tồn dư mặn, phân hóa học tích tụ qua nhiều năm.</li>
+          <li lang-en>Breaks heavy metal bonds and releases bound colloidal salts and synthetic fertilizer accumulations from topsoils.</li>
+          <li lang-vi>Xốp hóa cấu trúc đất mặt, tăng độ thông thoáng khí, tối ưu oxy nuôi dưỡng bộ rễ phát triển thần tốc.</li>
+          <li lang-en>Loosens and aerates topsoil architectures, maximizing rhizosphere oxygenation to drive explosive root division.</li>
+        </ul>
+      </div>
+      <div class="adv-card reveal">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
+          <span lang-vi>Bứt phá năng suất thu hoạch thương mại</span><span lang-en>Exponential Commercial Yield Driving</span>
+        </h4>
+        <ul>
+          <li lang-vi>Điều tiết nhịp sinh trưởng của cây theo mong muốn, giúp ra hoa đồng loạt, tăng tỷ lệ đậu trái thương phẩm.</li>
+          <li lang-en>Regulates crop growth phases predictably, enforcing synchronous flowering and boosting high-value fruit setting.</li>
+          <li lang-vi>Kéo dài chu kỳ khai thác và trẻ hóa hiệu quả các vườn cây ăn quả lâu năm đang có dấu hiệu già cỗi, kiệt quệ.</li>
+          <li lang-en>Prolongs harvest life cycles and effectively rejuvenates senescent, depleted perennial orchards.</li>
+        </ul>
+      </div>
+      <div class="adv-card reveal">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-15h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+          <span lang-vi>Nâng tầm phẩm cấp, hình thái nông sản</span><span lang-en>Elevating Produce Phyto-Quality Standards</span>
+        </h4>
+        <ul>
+          <li lang-vi>Gia tăng hàm lượng đường tinh khiết tự nhiên, hương vị đặc trưng và độ nhẵn bóng căng mọng của vỏ quả.</li>
+          <li lang-en>Elevates natural brix sugar accumulations, flavor profiles, and the premium glossy aesthetic of fruit skins.</li>
+          <li lang-vi>Kéo dài thời gian bảo quản tự nhiên sau thu hoạch thêm 30-45%, giảm thiểu hao hụt tỷ lệ thối nát khi vận chuyển xa.</li>
+          <li lang-en>Extends natural post-harvest storage lifespan by 30-45%, eliminating transit spoilage metrics over long distances.</li>
+        </ul>
+      </div>
+      <div class="adv-card reveal">
+        <h4>
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          <span lang-vi>Cắt giảm tối đa chi phí đầu tư nông nghiệp</span><span lang-en>Maximizing Agricultural Capital Retention</span>
+        </h4>
+        <ul>
+          <li lang-vi>Thay thế tới 40-50% lượng phân bón vô cơ NPK đắt đỏ, tiết giảm đáng kể chi phí nhân công chăm sóc ruộng vườn.</li>
+          <li lang-en>Replaces up to 40-50% of synthetic chemical NPK investments, trimming farming labor overheads.</li>
+          <li lang-vi>Cơ chế chủ động kháng khuẩn giúp triệt tiêu mầm mống nấm bệnh, cắt giảm chi phí mua thuốc bảo vệ thực vật.</li>
+          <li lang-en>Autonomic pathogen resistance limits disease outbreak parameters, substantially dropping crop protection costs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products-section" id="products">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Danh mục sản phẩm</span><span lang-en>Product Biosphere</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Hệ thống sản phẩm lưu hành chính thức</span>
+        <span lang-en>Official Registered Product Catalog</span>
+      </h2>
+      <p class="section-desc">
+        <span lang-vi>Toàn bộ danh mục sản phẩm của GoldTech đã được đăng ký mã số lưu hành hợp pháp, đáp ứng trọn vẹn tiêu chuẩn chất lượng ISO 9001:2015.</span>
+        <span lang-en>GoldTech’s unified solutions hold verified national registration keys and fulfill strict ISO 9001:2015 specifications.</span>
+      </p>
+    </div>
+    
+    <div class="products-showcase reveal">
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/g05-pro.png" alt="G05 Pro">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: G05 Pro từ ZIP</span><span lang-en>ZIP Asset: g05-pro.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 15262</span>
+          <h4>G05 Pro</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Phân bón vô cơ đa lượng cao cấp tích hợp vi lượng Nano dạng Chelate. Đạm tổng số (N<sub>ts</sub>): 3%; Lân hữu hiệu (P<sub>2</sub>O<sub>5hh</sub>): 4%; Kali hữu hiệu (K<sub>2</sub>O<sub>hh</sub>): 4%. Bổ sung Zn, Cu, Fe, B, Mo, Co siêu hoạt tính. pH: 6; Tỷ trọng: 1.3.</span>
+            <span lang-en><strong>Composition:</strong> High-grade inorganic macronutrient liquid with Chelated Nano micronutrients. Total Nitrogen (N): 3%; Available Phosphate (P<sub>2</sub>O<sub>5</sub>): 4%; Soluble Potash (K<sub>2</sub>O): 4%. Enhanced with highly active Zn, Cu, Fe, B, Mo, Co. pH: 6; SG: 1.3.</span>
+          </p>
+        </div>
+      </div>
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/goldtech-g05.png" alt="GoldTech G05">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: GoldTech G05 từ ZIP</span><span lang-en>ZIP Asset: goldtech-g05.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 15263</span>
+          <h4>GoldTech G05</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Chế phẩm hữu cơ sinh học đậm đặc. Hàm lượng chất hữu cơ tinh khiết: 23%; Axit Humic: 3.2%; Axit Fulvic: 8%; Đạm tổng số: 7%; Kali: 2%. Tổ hợp Nano vi lượng thông minh Zn, Cu, Mn, Co. pH: 7.</span>
+            <span lang-en><strong>Composition:</strong> Concentrated bio-organic liquid matrix. Pure Organic Matter: 23%; Humic Acid: 3.2%; Fulvic Acid: 8%; Total N: 7%; K<sub>2</sub>O: 2%. Synchronized with smart Nano micro-minerals Zn, Cu, Mn, Co. pH: 7.</span>
+          </p>
+        </div>
+      </div>
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/goldtech-g08.png" alt="GoldTech G08">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: GoldTech G08 từ ZIP</span><span lang-en>ZIP Asset: goldtech-g08.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 27500</span>
+          <h4>GoldTech G08</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Phân bón lá hữu cơ sinh học tế bào gốc. Hàm lượng chất hữu cơ hữu hiệu: 20%; Axit Humic cao phân tử: 5.5%; Axit Fulvic hòa tan: 4%. pH ổn định: 7; Tỷ trọng lý tưởng: 1.2.</span>
+            <span lang-en><strong>Composition:</strong> Advanced foliar organic bio-fertilizer with stem cell activators. Active Organic Matter: 20%; High-molecular Humic Acid: 5.5%; Soluble Fulvic Acid: 4%. Stable pH: 7; Ideal SG: 1.2.</span>
+          </p>
+        </div>
+      </div>
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/goldtech-g09.png" alt="GoldTech G09">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: GoldTech G09 từ ZIP</span><span lang-en>ZIP Asset: goldtech-g09.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 27501</span>
+          <h4>GoldTech G09</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Phân bón lá NPK sinh học thế hệ mới. Đạm (N): 7%; Lân hữu hiệu (P<sub>2</sub>O<sub>5</sub>): 11%; Kali hữu hiệu (K<sub>2</sub>O): 11%. Kết hợp đồng hóa cùng Axit Humic: 6.5% và Axit Fulvic: 1.8%. pH: 7.</span>
+            <span lang-en><strong>Composition:</strong> Next-gen NPK bio-active foliar fertilizer formulas. Nitrogen: 7%; Available Phosphate: 11%; Soluble Potash: 11%. Synergized with natural Humic Acid: 6.5% and Fulvic Acid: 1.8%. pH: 7.</span>
+          </p>
+        </div>
+      </div>
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/goldtech-g06-plus.png" alt="GoldTech G06 Plus">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: G06 Plus từ ZIP</span><span lang-en>ZIP Asset: goldtech-g06-plus.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 27502</span>
+          <h4>GoldTech G06 Plus</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Phân bón lá sinh học chuyên biệt cân bằng năng suất. Hàm lượng Đạm: 4.5%; Lân: 7%; Kali hữu hiệu tỷ lệ cao: 10%. Gia cường Axit Humic sinh học đậm đặc: 10% và Axit Fulvic: 1.8%. pH: 7.</span>
+            <span lang-en><strong>Composition:</strong> Specialized high-potency bio foliar complex for fruit filling. Nitrogen: 4.5%; Phosphate: 7%; High-ratio Soluble Potash: 10%. Reinforced with dense organic Humic Acid: 10% and Fulvic Acid: 1.8%. pH: 7.</span>
+          </p>
+        </div>
+      </div>
+      <div class="prod-item-card">
+        <div class="prod-img-box">
+          <img src="images/products/goldtech-g10.png" alt="GoldTech G10">
+          <div class="prod-img-placeholder"><span lang-vi>Ảnh: GoldTech G10 từ ZIP</span><span lang-en>ZIP Asset: goldtech-g10.png</span></div>
+        </div>
+        <div class="prod-details">
+          <span class="prod-code-tag">Mã lưu hành / Reg No: 27503</span>
+          <h4>GoldTech G10</h4>
+          <p class="prod-comp">
+            <span lang-vi><strong>Thành phần:</strong> Phân bón lá hữu cơ sinh học đa chức năng toàn diện. Đạm: 7.5%; Lân: 13.5%; Kali: 11%. Khối lượng chất hữu cơ sinh học: 22%; Axit Humic: 5.5%. Thiết lập trạng thái tăng trưởng đỉnh cao. pH: 7.</span>
+            <span lang-en><strong>Composition:</strong> Ultimate all-in-one organic NPK bio-foliar system. Nitrogen: 7.5%; Phosphate: 13.5%; Potash: 11%. Total Bio-Organic Content: 22%; Humic Acid: 5.5%. Orchestrates maximum vegetation response. pH: 7.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="factory" id="factory">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Năng lực sản xuất quy mô</span><span lang-en>Industrial Infrastructure</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Nhà máy công nghệ cao GoldTech Quang Minh</span>
+        <span lang-en>The GoldTech High-Tech Automated Plant</span>
+      </h2>
+    </div>
+    <div class="factory-grid">
+      <div class="factory-text reveal">
+        <p lang-vi>Tọa lạc chiến lược tại <strong>Lô 41C2 KCN Quang Minh, Thị Trấn Quang Minh, Huyện Mê Linh, Thành phố Hà Nội</strong>, tổng hành dinh sản xuất của GoldTech chính thức đi vào vận hành kỹ thuật khép kín từ năm 2013.</p>
+        <p lang-en>Strategically stationed at <strong>Lot 41C2, Quang Minh Industrial Park, Quang Minh Town, Me Linh District, Hanoi City</strong>, GoldTech’s heavy industrial production plant has driven closed-loop automated loops since 2013.</p>
+        <p lang-vi>Hệ thống sở hữu công suất thiết kế cơ sở vượt trội, cán mốc <strong>1.500.000 lít phân bón dạng lỏng hóa chelate thành phẩm mỗi năm</strong>, sẵn sàng đáp ứng nhu cầu nội địa quy mô lớn và đơn hàng xuất khẩu quốc tế số lượng lớn.</p>
+        <p lang-en>The manufacturing site yields an impressive baseline capacity, generating <strong>1,500,000 liters of chelated liquid formulation per annum</strong>, engineered to feed massive domestic commercial grids and continuous export orders.</p>
+        <p lang-vi>Vận hành quy trình công nghệ điều chế chất lỏng hữu cơ tiên tiến bậc nhất thế giới, chuỗi thiết bị khép kín tự động hóa 100% giảm thiểu tối đa sai sót vật lý, kiểm soát chất lượng nguyên liệu đầu vào thông qua các phép phân tích quang phổ nghiêm ngặt.</p>
+        <p lang-en>Utilizing cutting-edge liquid organic engineering software and a 100% automated processing array, the factory minimizes human error tolerances and validates input raw elements through multi-stage spectral analysis.</p>
+        <p lang-vi>Nhà máy GoldTech vinh dự được Bộ Khoa học và Công nghệ cấp chứng nhận kiểm định chất lượng quốc tế <strong>ISO 9001:2015</strong>, phân chia khoa học thành 03 đại khu chức năng biệt lập: Khu vực tổng hợp chế biến tự động, Kho nguyên liệu màng bao bì vô trùng, và Tổng kho thành phẩm lưu thông.</p>
+        <p lang-en>Proudly certified under the global <strong>ISO 9001:2015</strong> Quality Standards array, the layout is mathematically bifurcated into 3 clean zones: Automatic High-Pressure Compounding Labs, Sterile Raw Materials & Packaging Vaults, and Managed Finished Logistics Warehouses.</p>
+      </div>
+      <div class="reveal">
+        <div class="factory-img-wrap">
+          <img src="images/factory.jpg" alt="GoldTech Manufacturing Plant inside Industrial Park">
+          <div class="factory-img-placeholder"><span lang-vi>Ảnh: Nhà máy Quang Minh (ZIP)</span><span lang-en>ZIP Asset: factory.jpg</span></div>
+        </div>
+        <div class="factory-specs">
+          <div class="spec-box">
+            <div class="spec-val">2013</div>
+            <div class="spec-key"><span lang-vi>Vận hành từ</span><span lang-en>In Operation</span></div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-val">1.5M</div>
+            <div class="spec-key"><span lang-vi>Lít / Năm</span><span lang-en>Litres / Year</span></div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-val">15M</div>
+            <div class="spec-key"><span lang-vi>Chai thành phẩm</span><span lang-en>Bottles Out</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="certs" id="certifications">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Khung pháp lý quốc gia</span><span lang-en>Regulatory Compliance</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Hồ sơ năng lực pháp lý & Chứng nhận đạt chuẩn</span>
+        <span lang-en>Verified Legal Credentials & National Accreditations</span>
+      </h2>
+      <p class="section-desc">
+        <span lang-vi>GoldTech hoạt động minh bạch dưới sự cấp phép chính thức của Cục Bảo vệ Thực vật và các trung tâm kiểm định Đo lường Chất lượng tối cao tại Việt Nam.</span>
+        <span lang-en>GoldTech operates transparently under official regulatory permits from the Plant Protection Department and supreme national quality control institutes.</span>
+      </p>
+    </div>
+    <div class="certs-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+        </div>
+        <h4><span lang-vi>Giấy phép Kinh doanh</span><span lang-en>Business Registration Key</span></h4>
+        <p lang-vi>Mã số doanh nghiệp chính thức: 0106194323 do Sở Kế hoạch và Đầu tư thành phố Hà Nội cấp. Pháp nhân đầy đủ.</p>
+        <p lang-en>Official Enterprise Code: 0106194323 issued by Hanoi Department of Planning and Investment. Full legal status.</p>
+        <span class="cert-badge">MÃ SỐ / CODE: 0106194323</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <h4><span lang-vi>Giấy phép Sản xuất Phân bón</span><span lang-en>Fertilizer Manufacturing License</span></h4>
+        <p lang-vi>Số quyết định: 0327/GCN-BVTV-PB cấp bởi Cục Bảo Vệ Thực Vật – Bộ Nông nghiệp. Có giá trị pháp lý đến 2026.</p>
+        <p lang-en>License ID: 0327/GCN-BVTV-PB authorized by National Plant Protection Department. Valid until June 2026.</p>
+        <span class="cert-badge">CỤC BVTV CHỨNG NHẬN</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h4><span lang-vi>Quyết định Lưu hành Bộ I</span><span lang-en>Circulation Decree Set I</span></h4>
+        <p lang-vi>Số: 451/QĐ-BVTV-PB chứng nhận danh mục sản phẩm phân bón hữu cơ lưu hành diện rộng toàn quốc hợp pháp.</p>
+        <p lang-en>Decree No: 451/QD-BVTV-PB validating the circulation and nationwide commercial distribution rights.</p>
+        <span class="cert-badge">HIỆU LỰC / VALID: 2028</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h4><span lang-vi>Quyết định Lưu hành Bộ II</span><span lang-en>Circulation Decree Set II</span></h4>
+        <p lang-vi>Số: 153/QĐ-BVTV-PB phê duyệt bổ sung danh mục 04 dòng phân bón NPK lá sinh học công nghệ nano đặc hiệu.</p>
+        <p lang-en>Decree No: 153/QD-BVTV-PB certifying the extended portfolio of 4 customized bio-nano foliar formulas.</p>
+        <span class="cert-badge">HIỆU LỰC / VALID: 2028</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+        </div>
+        <h4><span lang-vi>Chứng chỉ Quốc tế ISO 9001</span><span lang-en>ISO 9001:2015 Certification</span></h4>
+        <p lang-vi>Mã số chứng nhận VICB 2980.1-R2 cấp bởi cơ quan VINACERT, thẩm định hệ thống quản lý sản xuất đạt chuẩn toàn cầu.</p>
+        <p lang-en>Certificate VICB 2980.1-R2 issued by VINACERT body, verifying global production quality management architectures.</p>
+        <span class="cert-badge">HẠN DÙNG / EXPIRY: 2027</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/></svg>
+        </div>
+        <h4><span lang-vi>Sở hữu Trí tuệ & Mã vạch</span><span lang-en>Trademark & Barcode GS1</span></h4>
+        <p lang-vi>Bảo hộ nhãn hiệu số 270378 của Cục Sở hữu Trí tuệ. Đăng ký mã vạch truy xuất nguồn gốc toàn cầu GS1: 8938510176.</p>
+        <p lang-en>Trademark Registration No. 270378. Integrated global logistics barcode system GS1 index mapping: 8938510176.</p>
+        <span class="cert-badge">GS1 REGISTERED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results" id="results">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Chứng minh thực tiễn</span><span lang-en>Empirical Performance</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Báo cáo Hiệu quả Kinh tế Thực tế trên Cây trồng</span>
+        <span lang-en>Verified Agro-Economic Efficiency Performance Reports</span>
+      </h2>
+      <p class="section-desc">
+        <span lang-vi>Dữ liệu đối chiếu khoa học giữa mô hình ứng dụng quy trình phân bón sinh học GoldTech với mô hình bón phân hóa học truyền thống tại Việt Nam.</span>
+        <span lang-en>Mathematical cost-benefit analysis benchmarking GoldTech integrated protocols against legacy chemical crop farming frameworks in Vietnam.</span>
+      </p>
+    </div>
+    
+    <div class="results-tabs reveal">
+      <button class="tab-btn active" onclick="showTab(event, 'lua')"><span lang-vi>Lúa – Thái Bình</span><span lang-en>Rice – Thai Binh</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'dualuoi')"><span lang-vi>Dưa lưới – FVF</span><span lang-en>Melon – FVF Farm</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'duachuot')"><span lang-vi>Dưa chuột – FVF</span><span lang-en>Cucumber – FVF</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'raumuong')"><span lang-vi>Rau muống – FVF</span><span lang-en>Water Spinach – FVF</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'caingot')"><span lang-vi>Cải ngọt – FVF</span><span lang-en>Bok Choy – FVF</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'suhao')"><span lang-vi>Su hào – Thanh Hóa</span><span lang-en>Kohlrabi – Thanh Hoa</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'che')"><span lang-vi>Chè – Mộc Châu</span><span lang-en>Tea – Moc Chau</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'cam')"><span lang-vi>Cam – Hòa Bình</span><span lang-en>Orange – Hoa Binh</span></button>
+      <button class="tab-btn" onclick="showTab(event, 'hanh')"><span lang-vi>Hành – Lý Sơn</span><span lang-en>Garlic/Onion – Ly Son</span></button>
+    </div>
+
+    <div class="tab-content active" id="tab-lua">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Chỉ tiêu thống kê (Đống ruộng mẫu)</span><span lang-en>Economic Indicator (Field Trial)</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th><span lang-vi>Mô hình GoldTech</span><span lang-en>GoldTech Protocol</span></th>
+              <th><span lang-vi>Đối chứng hóa học</span><span lang-en>Chemical Control</span></th>
+              <th><span lang-vi>Chênh lệch giá trị</span><span lang-en>Net Variance</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Tổng chi phí canh tác mặt bằng</span><span lang-en>Total Cultivation Cost</span></td><td>đ/ha</td><td>34,333,333</td><td>34,597,222</td><td class="gold-text">–263,889</td></tr>
+            <tr><td><span lang-vi>Năng suất hạt thực tế thu về</span><span lang-en>Actual Measured Crop Yield</span></td><td>kg/ha</td><td class="highlight">8,611</td><td>6,944</td><td class="gold-text">+1,667</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu thương mại</span><span lang-en>Gross Market Revenue</span></td><td>đ/ha</td><td class="highlight">51,666,667</td><td>41,666,667</td><td class="gold-text">+10,000,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận ròng thu về</span><span lang-en>Net Economic Profit</span></td><td>đ/ha</td><td class="highlight">17,333,333</td><td>7,069,444</td><td class="gold-text"><strong>+10,263,889</strong></td></tr>
+            <tr><td><span lang-vi>Chu kỳ sinh trưởng thu hoạch</span><span lang-en>Total Days to Harvest</span></td><td>ngày/vụ</td><td class="highlight">95</td><td>99</td><td class="gold-text">–4 ngày / days</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="result-note">
+        <p lang-vi>"Sau khi sử dụng phân bón hữu cơ sinh học GoldTech, cây lúa không xanh mướt giả tạo mà cứng cáp cá thể. Khi trổ bông đồng loạt, tỷ lệ hạt chắc mẩy từ đầu tới cuối bông đạt mức tối đa, năng suất bứt phá vượt kỳ vọng trong khi tiết giảm đáng kể công lao động." <strong>– Đánh giá thực địa từ chủ nông hộ Thái Bình</strong></p>
+        <p lang-en>"Upon applying GoldTech organic bio-fertilizer, the rice crops developed excellent physical sturdiness instead of artificial lush coloring. Panicle formation was highly synchronized, with optimal seed filling from base to tip, driving high yield gains under reduced labor inputs." <strong>– Empirical Field Comment, Thai Binh Farmer Council</strong></p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-dualuoi">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Chỉ tiêu kinh tế mẫu</span><span lang-en>Performance Indicator</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th><span lang-vi>Mô hình GoldTech</span><span lang-en>GoldTech Protocol</span></th>
+              <th><span lang-vi>Đối chứng nhà màng</span><span lang-en>Standard Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Tổng chi phí đầu tư phân bón</span><span lang-en>Total Fertilizer Cost</span></td><td>đ</td><td>265,830,000</td><td>264,480,000</td></tr>
+            <tr><td><span lang-vi>Năng suất thu hoạch thực phẩm</span><span lang-en>Measured Commercial Yield</span></td><td>kg/ha</td><td class="highlight">18,000</td><td>17,000</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu bán sỉ</span><span lang-en>Gross Market Revenue</span></td><td>đ/ha</td><td class="highlight">720,000,000</td><td>680,000,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận thu về ròng</span><span lang-en>Net Economic Profit</span></td><td>đ/ha</td><td class="highlight">454,170,000</td><td>415,520,000</td></tr>
+            <tr><td><span lang-vi>Chênh lệch lợi nhuận ròng tăng thêm</span><span lang-en>Net Marginal Profit Increase</span></td><td>đ/ha</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+38,650,000 đ / ha</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="result-note">
+        <p lang-vi>"Hệ thống ghi nhận sự sụt giảm áp lực nấm bệnh rễ cô lập rõ rệt trên luống mô hình. Chế phẩm dạng lỏng phân tán hoàn toàn tương thích và tối ưu với hệ thống châm phân nhỏ giọt tự động công nghệ cao của nông trường FVF." <strong>– Kỹ sư trưởng Ban kỹ thuật nông nghiệp FVF</strong></p>
+        <p lang-en>"Our tracking database logged an absolute reduction in soil-borne fungal vector pressures. The liquid formulation features exceptional solubility, fully integrating with FVF's high-tech automated fertigation and drip infrastructure." <strong>– Chief Agronomist, FVF Greenhouse Corporate Division</strong></p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-duachuot">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Tiêu chí khảo nghiệm</span><span lang-en>Trial Metric</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th><span lang-vi>GoldTech</span><span lang-en>GoldTech</span></th>
+              <th><span lang-vi>Đối chứng</span><span lang-en>Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Tổng chi phí canh tác</span><span lang-en>Total Overhead Cost</span></td><td>đ</td><td>173,610,000</td><td>172,260,000</td></tr>
+            <tr><td><span lang-vi>Năng suất thương phẩm</span><span lang-en>Measured Yield Capacity</span></td><td>kg/ha</td><td class="highlight">18,000</td><td>17,000</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu tiêu thụ</span><span lang-en>Gross Sales Revenue</span></td><td>đ/ha</td><td class="highlight">396,000,000</td><td>374,000,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận ròng thu về</span><span lang-en>Net Farm Profit</span></td><td>đ/ha</td><td class="highlight">222,390,000</td><td>201,740,000</td></tr>
+            <tr><td><span lang-vi>Thặng dư tăng thêm</span><span lang-en>Net Gain Variance</span></td><td>đ/ha</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+20,650,000 đ</strong></td></tr>
+            <tr><td><span lang-vi>Chu kỳ từ xuống giống đến thu hoạch</span><span lang-en>Days to Market Maturity</span></td><td>ngày</td><td class="highlight">27</td><td>30</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-raumuong">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Chỉ tiêu</span><span lang-en>Indicator</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th>GoldTech</th>
+              <th><span lang-vi>Đối chứng</span><span lang-en>Control</span></th>
+              <th><span lang-vi>Chênh lệch</span><span lang-en>Variance</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Năng suất sinh khối sạch</span><span lang-en>Biomass Yield Output</span></td><td>kg/ha</td><td class="highlight">21,000</td><td>20,000</td><td>+1,000</td></tr>
+            <tr><td><span lang-vi>Tổng giá trị doanh thu</span><span lang-en>Gross Sales Revenue</span></td><td>đ/ha</td><td class="highlight">525,000,000</td><td>500,000,000</td><td>+25,000,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận hạch toán ròng</span><span lang-en>Net Project Profit</span></td><td>đ/ha</td><td class="highlight">382,550,000</td><td>357,340,000</td><td><strong>+25,210,000</strong></td></tr>
+            <tr><td><span lang-vi>Chu kỳ quay vòng lứa rau</span><span lang-en>Rotation Cycle</span></td><td>ngày</td><td class="highlight">15</td><td>17</td><td>–2 ngày / days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-caingot">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Chỉ tiêu khảo nghiệm</span><span lang-en>Trial Metric</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th>GoldTech</th>
+              <th><span lang-vi>Đối chứng</span><span lang-en>Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Năng suất thu hoạch thực tế</span><span lang-en>Measured Output Yield</span></td><td>kg/ha</td><td class="highlight">12,000</td><td>11,500</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu thương mại</span><span lang-en>Gross Sales Revenue</span></td><td>đ/ha</td><td class="highlight">300,000,000</td><td>287,500,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận ròng tích lũy</span><span lang-en>Net Accumulated Profit</span></td><td>đ/ha</td><td class="highlight">194,630,000</td><td>183,480,000</td></tr>
+            <tr><td><span lang-vi>Tăng trưởng lợi nhuận ròng</span><span lang-en>Net Marginal Increase</span></td><td>đ/ha</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+11,150,000 đ</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="result-note">
+        <p lang-vi>"Bẹ cải dày, giòn búp và có khả năng lưu kho tự nhiên kéo dài hơn đối chứng từ 1-2 ngày mà không bị thối nhũn lá, điều này giúp tối ưu hóa lợi nhuận xuất sỉ." <strong>– Ban kỹ thuật vận hành FVF</strong></p>
+        <p lang-en>"The crop developed superior leaf thickness and cell density, extending natural cold storage stability by 1-2 days without leaf rot, drastically reducing commercial disposal margins." <strong>– FVF Technical Logistics Team</strong></p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-suhao">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Tiêu chí hạch toán</span><span lang-en>Financial Metric</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th>GoldTech</th>
+              <th><span lang-vi>Đối chứng</span><span lang-en>Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Năng suất củ thương phẩm</span><span lang-en>Tuber Weight Yield</span></td><td>kg/ha</td><td class="highlight">5,556</td><td>5,000</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu xuất sỉ</span><span lang-en>Gross Whole Sales</span></td><td>đ/ha</td><td class="highlight">19,444,444</td><td>17,500,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận thực tế thu về</span><span lang-en>Net Farm Profit</span></td><td>đ/ha</td><td class="highlight">9,083,333</td><td>7,194,444</td></tr>
+            <tr><td><span lang-vi>Hiệu số thặng dư</span><span lang-en>Net Profit Margin Diff</span></td><td>đ/ha</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+1,888,889 đ</strong></td></tr>
+            <tr><td><span lang-vi>Thời gian thu hoạch rút ngắn</span><span lang-en>Days to Harvest maturity</span></td><td>ngày</td><td class="highlight">55</td><td>60</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-che">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Tiêu chí đo lường (Hàng năm)</span><span lang-en>Measured Metric (Annualized)</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th>Mô hình GoldTech</th>
+              <th><span lang-vi>Đối chứng canh tác cũ</span><span lang-en>Legacy Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Năng suất búp chè tươi hái thu hoạch</span><span lang-en>Fresh Tea Bud Harvest Output</span></td><td>kg/ha/năm</td><td class="highlight">36,000</td><td>28,000</td></tr>
+            <tr><td><span lang-vi>Tổng doanh thu bán nông trường</span><span lang-en>Gross Farm Revenue</span></td><td>đ/ha/năm</td><td class="highlight">162,000,000</td><td>126,000,000</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận hạch toán kinh tế ròng</span><span lang-en>Net Economic Farm Profit</span></td><td>đ/ha/năm</td><td class="highlight">122,080,000</td><td>86,120,000</td></tr>
+            <tr><td><span lang-vi>Chênh lệch giá trị thặng dư ròng</span><span lang-en>Net Profit Advantage Value</span></td><td>đ/ha/năm</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+35,960,000 đ / năm</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="result-note">
+        <p lang-vi>"Búp chè phát triển dày, mướt lá, mật độ búp lên đều tăm tắp sau cắt cành. Đặc biệt, kết quả kiểm nghiệm độc lập cho thấy dư lượng hóa chất nằm tuyệt đối dưới ngưỡng kiểm soát, đáp ứng trọn vẹn tiêu chuẩn xuất khẩu trực tiếp sang thị trường Liên minh Châu Âu (EU)." <strong>– Đại diện Kỹ thuật Nông trường Chè Mộc Châu</strong></p>
+        <p lang-en>"Tea shoots generated higher volume and density with perfect physical consistency post-pruning. Crucially, independent laboratory assay reviews proved pesticide residual parameters were far below maximum toxicity thresholds, fully clearing European Union (EU) import standards." <strong>– Technical Director, Moc Chau Tea Plantation Corporation</strong></p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-cam">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Tiêu chí theo dõi</span><span lang-en>Orchard Track Metric</span></th>
+              <th><span lang-vi>Đơn vị</span><span lang-en>Unit</span></th>
+              <th>GoldTech Model</th>
+              <th><span lang-vi>Đối chứng phân hóa học</span><span lang-en>Chemical Control</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span lang-vi>Năng suất quả đạt chuẩn loại I</span><span lang-en>Grade-A Fruit Harvest Output</span></td><td>kg/ha</td><td class="highlight">11,806</td><td>11,111</td></tr>
+            <tr><td><span lang-vi>Tổng giá trị thương mại thu sỉ</span><span lang-en>Gross Whole Sales Value</span></td><td>đ/ha</td><td class="highlight">472,222,222</td><td>444,444,444</td></tr>
+            <tr><td><span lang-vi>Lợi nhuận ròng thu về</span><span lang-en>Net Income Profit</span></td><td>đ/ha</td><td class="highlight">458,041,667</td><td>429,291,667</td></tr>
+            <tr><td><span lang-vi>Thặng dư tăng trưởng gia tăng</span><span lang-en>Net Financial Yield Shift</span></td><td>đ/ha</td><td colspan="2" class="gold-text" style="text-align:center"><strong>+28,750,000 đ</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-hanh">
+      <div class="result-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><span lang-vi>Công thức Khảo nghiệm (Xử lý hạt giống & Đất)</span><span lang-en>Trial Formula (Seed & Soil Engineering)</span></th>
+              <th><span lang-vi>Tổng chi đầu tư (đ)</span><span lang-en>Total Cost</span></th>
+              <th><span lang-vi>Tổng doanh thu (đ)</span><span lang-en>Gross Revenue</span></th>
+              <th><span lang-vi>Lợi nhuận thực tế (đ)</span><span lang-en>Net Farm Profit</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CT1 (<span lang-vi>Canh tác truyền thống không GoldTech</span><span lang-en>Legacy Standard - No GoldTech</span>)</td><td>99,250,000</td><td>429,300,000</td><td class="highlight">330,050,000</td></tr>
+            <tr><td>CT2 (<span lang-vi>Tích hợp quy trình GoldTech tiêu chuẩn 306ml</span><span lang-en>GoldTech Protocol - 306ml Standard</span>)</td><td>96,877,000</td><td>534,285,000</td><td class="highlight">437,408,000</td></tr>
+            <tr><td>CT3 (<span lang-vi>Quy trình GoldTech tối ưu kết hợp giảm 40% NPK</span><span lang-en>GoldTech + 40% Chemical NPK Reduction</span>)</td><td>71,677,000</td><td>488,880,000</td><td class="highlight">417,203,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="international" id="international">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Khảo nghiệm quốc tế</span><span lang-en>Global Trials</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Thành tựu & Kết quả vượt trội tại Đông Java – Indonesia</span>
+        <span lang-en>Outstanding Empirical Breakthroughs in East Java, Indonesia</span>
+      </h2>
+      <p class="section-desc">
+        <span lang-vi>GoldTech đã vượt qua các bộ tiêu chuẩn kiểm định thực địa khắt khe tại các khu vực Lamongan, Trenggalek, Pacet thuộc quốc gia Indonesia, chứng minh tính thích ứng thổ nhưỡng đa dạng toàn cầu.</span>
+        <span lang-en>GoldTech has successfully completed multi-phase empirical trials across Lamongan, Trenggalek, and Pacet, verifying its high agronomic versatility across diverse international soil classifications.</span>
+      </p>
+    </div>
+    <div class="intl-grid">
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Thuốc lá – Lamongan, East Java</span><span lang-en>Tobacco – Lamongan, East Java</span></h4>
+          <span><span lang-vi>Kết quả thực nghiệm lâm sàng</span><span lang-en>Field Verification Metrics</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-outcome">
+            <p lang-vi>Mô hình bón bổ sung 1ml GoldTech phối hợp cắt giảm 1/2 lượng phân hóa học mang lại kết quả vượt trội: Phiến lá dày, màu sắc xanh sáng đồng nhất, phản ánh trạng thái tích lũy dinh dưỡng tế bào hoàn hảo. Cơ chế tinh dầu tự nhiên loại bỏ hoàn toàn áp lực sâu cắn lá, tăng tốc chu kỳ thu hái do đẩy nhanh tiến trình chín sinh lý tự nhiên của lá thuốc.</p>
+            <p lang-en>Application of 1ml GoldTech combined with a 50% chemical fertilizer reduction achieved prime leaf thickness and a highly uniform light-green color index. The bio-essential oil matrix entirely suppressed worm infestations, optimizing harvest timelines by accelerating physiological leaf maturity cycles safely.</p>
+          </div>
+        </div>
+      </div>
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Ớt thương phẩm – Trenggalek</span><span lang-en>Commercial Chili – Trenggalek</span></h4>
+          <span><span lang-vi>Phục hồi & Kháng khuẩn dịch bệnh</span><span lang-en>Pathogen & Pest Eradication</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-outcome">
+            <p lang-vi>Thực nghiệm triển khai phun định kỳ 4 lần trên quần thể cây ớt 100 ngày tuổi đang chịu áp lực tàn phá nặng nề từ dịch ruồi đục quả (Fruit flies). Ngay sau lượt xử lý sinh học thứ hai, mật độ ruồi đục quả sụt giảm về 0, cây tái thiết lập chu trình sinh trưởng mạnh mẽ, quả ớt to, thịt quả dày cứng cáp, mẫu mã đạt chuẩn xuất khẩu.</p>
+            <p lang-en>Periodic spraying protocols applied 4 times on a 100-day-old chili plot suffering devastating fruit fly attacks. By the second structural bio-application, fruit fly counts fell to absolute zero, driving healthy plant regeneration, producing rigid fruit walls and premium skin uniformity.</p>
+          </div>
+        </div>
+      </div>
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Hành tím – Pacet, East Java</span><span lang-en>Shallot Crops – Pacet, East Java</span></h4>
+          <span><span lang-vi>Chỉ số cân đo trọng lượng</span><span lang-en>Quantitative Weight Assay</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-row"><span class="label"><span lang-vi>Năng suất GoldTech</span><span lang-en>GoldTech Yield</span></span><span class="value">9.3 Tấn / Ton / Ha</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Năng suất Đối chứng</span><span lang-en>Legacy Control Yield</span></span><span class="value">6.0 – 7.0 Tấn / Ton / Ha</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Trọng lượng củ trung bình</span><span lang-en>Mean Bulb Weight</span></span><span class="value">15.82g vs 11.89g</span></div>
+          <div class="intl-outcome">
+            <p lang-vi>GoldTech giúp hành sinh trưởng mạnh mẽ, giữ vững cấu trúc tế bào lá thẳng đứng đứng vững trước điều kiện giông bão bất lợi vào ngày thứ 41. Thu hoạch cho củ có kích thước lớn vượt trội, đạt khối lượng khô trung bình 15.82 gram so với chỉ 11.89 gram của đối chứng truyền thống.</p>
+            <p lang-en>GoldTech maintained pristine vertical leaf turgor and stalk rigidity against adverse wind storms at day 41. Harvest metrics logged oversized bulb developments, registering a dominant mean weight of 15.82 grams compared to 11.89 grams in standard farm plots.</p>
+          </div>
+        </div>
+      </div>
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Cà chua – Pacet, East Java</span><span lang-en>Tomato Biosphere – Pacet, East Java</span></h4>
+          <span><span lang-vi>Giải cứu & Hồi sinh mô tủy cây</span><span lang-en>Crop Revival Performance</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-outcome">
+            <p lang-vi>Trước khi đưa quy trình GoldTech vào áp dụng, toàn bộ cánh đồng cà chua khảo nghiệm đang rơi vào trạng thái héo rũ gốc, suy kiệt cận kề cái chết sinh học. Tiến hành phun cấp cứu hồi sinh 4 lượt liên tục (giãn cách chu kỳ 4 ngày/lần), mô tủy lá phục hồi sắc tố diệp lục hoàn toàn, kích thích cây bật chồi, ra hoa kết trái thần tốc.</p>
+            <p lang-en>Prior to treatment, the tomato test plot was in a terminal state of physiological wilting and vascular collapse. Following 4 consecutive high-frequency recovery sprays (spaced every 4 days), chlorophyll synthesis fully reactivated, prompting strong canopy regeneration and explosive fruit setting loops.</p>
+          </div>
+        </div>
+      </div>
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Cà rốt lấy củ – Pacet</span><span lang-en>Carrot Tubers – Pacet, East Java</span></h4>
+          <span><span lang-vi>Sản lượng thu hoạch thực tế</span><span lang-en>Tuber Biomass Metric</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-row"><span class="label"><span lang-vi>Sản lượng GoldTech</span><span lang-en>GoldTech Output</span></span><span class="value">18.0 Tấn / Ton / Ha</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Sản lượng Đối chứng</span><span lang-en>Control Output</span></span><span class="value">&lt; 10.0 Tấn / Ton / Ha</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Trọng lượng trung bình củ</span><span lang-en>Mean Root Weight</span></span><span class="value">114.28g vs 87.40g</span></div>
+          <div class="intl-outcome">
+            <p lang-vi>Vào mốc 40 ngày sau khi hạ giống, mật độ lá quang hợp của mô hình GoldTech vượt trội rõ rệt. Năng suất củ đạt bước nhảy vọt thần tốc đạt 18 tấn/ha (gần gấp đôi mức dưới 10 tấn/ha của ruộng đối chứng hóa học thông thường), lõi củ thẳng chắc ngọt.</p>
+            <p lang-en>At day 40 post-planting, active solar canopy surface area was substantially denser. Harvesting metrics confirmed a massive production spike to 18 tons/ha, effectively doubling the <10 tons/ha chemical benchmark, generating highly rigid sweet root structures.</p>
+          </div>
+        </div>
+      </div>
+      <div class="intl-card reveal">
+        <div class="intl-header">
+          <h4><span lang-vi>Cây Lúa nước – Pacet, East Java</span><span lang-en>Paddy Rice – Pacet, East Java</span></h4>
+          <span><span lang-vi>Đo lường Khả năng Đẻ nhánh</span><span lang-en>Vegetative Tiller Accrual</span></span>
+        </div>
+        <div class="intl-body">
+          <div class="intl-row"><span class="label"><span lang-vi>Số nhánh đẻ hữu hiệu/Gốc</span><span lang-en>Effective Tillers per Hill</span></span><span class="value">32 nhánh / tillers</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Đối chứng hóa học</span><span lang-en>Chemical Control Baseline</span></span><span class="value">20 nhánh / tillers</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Sản lượng gặt thu hoạch</span><span lang-en>Final Harvest Yield</span></span><span class="value">9.4 Tấn / Ton / Ha</span></div>
+          <div class="intl-row"><span class="label"><span lang-vi>Sản lượng đối chứng</span><span lang-en>Control Output Shift</span></span><span class="value">6.0 – 7.0 Tấn / Ton / Ha</span></div>
+          <div class="intl-outcome">
+            <p lang-vi>Sạch bóng các loại sâu hại, rầy sinh học sau 21 ngày cấy. Sau chu trình 60 ngày bón định kỳ kết hợp 8 lượt phun, số lượng nhánh đẻ hữu hiệu cho bông đạt con số kỷ lục 32 nhánh trên mỗi bụi lúa so với mức 20 nhánh nghèo nàn của đối chứng truyền thống.</p>
+            <p lang-en>Completely cleared of leaf roller and planthopper infestations within 21 days post-transplanting. At day 60, tracking logged a record-breaking 32 productive tillers per hill cluster, far surpassing the poor 20-tiller ceiling of chemical fertilizer models.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <span lang-vi>Kênh tương tác toàn cầu</span><span lang-en>Global Inquiry Center</span>
+      </div>
+      <h2 class="section-title">
+        <span lang-vi>Xây dựng liên kết bền vững cùng GoldTech</span>
+        <span lang-en>Forge a High-Yield Partnership with GoldTech</span>
+      </h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-item-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4><span lang-vi>Trụ sở tổng hành dinh chính</span><span lang-en>Corporate Head Office</span></h4>
+            <p>Số 91A đường Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam.</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4><span lang-vi>Tổ hợp Nhà máy Sản xuất</span><span lang-en>Manufacturing Plant Complex</span></h4>
+            <p>Lô 41C2 KCN Quang Minh, Thị Trấn Quang Minh, Huyện Mê Linh, Thành phố Hà Nội, Việt Nam.</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4><span lang-vi>Đường dây nóng hỗ trợ</span><span lang-en>Agronomic Hotline Support</span></h4>
+            <p>024.8589.8982</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95a15.65 15.65 0 00-1.38-3.56A8.03 8.03 0 0118.92 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14c-.16-.64-.26-1.31-.26-2s.1-1.36.26-2h3.38c-.09.66-.16 1.32-.16 2 0 .68.07 1.35.16 2H4.26zm.96 2h2.95c.32 1.31.79 2.51 1.38 3.56A8.03 8.03 0 015.22 16zm2.95-8H5.22a8.03 8.03 0 014.33-3.56A15.65 15.65 0 008.17 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h-3.82c.43 1.43 1.08 2.76 1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.67.07-1.34.16-2h4.68c.09.66.16 1.33.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.59-1.05 1.06-2.25 1.38-3.56h2.95a8.03 8.03 0 01-4.33 3.56zM16.36 14c.09-.65.16-1.32.16-2 0-.68-.07-1.34-.16-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <h4><span lang-vi>Cổng thông tin Điện tử</span><span lang-en>Web Portal Domain</span></h4>
+            <p>http://goldtech.com.vn</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form reveal">
+        <h3 id="formTitle">
+          <span lang-vi>Yêu cầu Chuyên gia tư vấn Quy trình</span>
+          <span lang-en>Request a Professional Agronomic Plan</span>
+        </h3>
+        <div class="form-row">
+          <label><span lang-vi>Họ và tên danh tính</span><span lang-en>Full Name</span></label>
+          <input type="text" id="formName" placeholder="...">
+        </div>
+        <div class="form-row">
+          <label><span lang-vi>Số điện thoại liên lạc</span><span lang-en>Phone Number</span></label>
+          <input type="tel" id="formPhone" placeholder="...">
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" id="formEmail" placeholder="name@domain.com">
+        </div>
+        <div class="form-row">
+          <label><span lang-vi>Phân khúc Cây trồng quan tâm</span><span lang-en>Crop Culture Category</span></label>
+          <select id="formCrop">
+            <option lang-vi value="">-- Lựa chọn nhóm cây --</option>
+            <option lang-en value="">-- Select Crop Specialization --</option>
+            <option lang-vi value="Lúa">Cây Lúa nước / Lương thực</option><option lang-en value="Lúa">Paddy Rice Systems</option>
+            <option lang-vi value="Rau">Cây Rau màu sạch cao sản</option><option lang-en value="Rau">High-Yield Horticulture</option>
+            <option lang-vi value="Ăn quả">Cây Ăn quả đặc sản vùng miền</option><option lang-en value="Ăn quả">Perennial Fruit Orchards</option>
+            <option lang-vi value="Công nghiệp">Cây Công nghiệp giá trị kinh tế cao</option><option lang-en value="Công nghiệp">Industrial Cash Crops</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label><span lang-vi>Mô tả hiện trạng thổ nhưỡng / nhu cầu</span><span lang-en>Soil Symptoms / Inquiry Message</span></label>
+          <textarea id="formMessage" placeholder="..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitInquiry()">
+          <span lang-vi>Gửi thông tin đăng ký</span>
+          <span lang-en>Transmit Digital Inquiry</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><span>GOLD</span><span>TECH</span></div>
+  <div class="footer-tagline">
+    <span lang-vi>Công ty TNHH Phân Bón Hữu Cơ Quốc Tế GoldTech – Kiến tạo nền nông nghiệp sinh thái bền vững vì tương lai đất Việt</span>
+    <span lang-en>GoldTech International Organic Fertilizer Co., Ltd – Pioneering Ecological Agri-Solutions for Global Food Security</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#about"><span lang-vi>Giới thiệu</span><span lang-en>About</span></a></li>
+    <li><a href="#technology"><span lang-vi>Công nghệ</span><span lang-en>Technology</span></a></li>
+    <li><a href="#products"><span lang-vi>Sản phẩm</span><span lang-en>Products</span></a></li>
+    <li><a href="#factory"><span lang-vi>Nhà máy</span><span lang-en>Factory</span></a></li>
+    <li><a href="#certifications"><span lang-vi>Pháp lý</span><span lang-en>Certificates</span></a></li>
+    <li><a href="#results"><span lang-vi>Kết quả</span><span lang-en>Results</span></a></li>
+    <li><a href="#contact"><span lang-vi>Liên hệ</span><span lang-en>Contact</span></a></li>
+  </ul>
+  <div class="footer-bottom">
+    <span lang-vi>© 2026 GoldTech. Đăng ký kinh doanh số: 0106194323 · Đại bản doanh: Số 91A đường Nguyễn Khang, Phường Yên Hòa, Quận Cầu Giấy, Thành phố Hà Nội · Tổ hợp sản xuất: Lô 41C2 KCN Quang Minh, Mê Linh, Hà Nội · Hotline kỹ thuật: 024.8589.8982</span>
+    <span lang-en>© 2026 GoldTech. Enterprise Regulatory No: 0106194323 · HQ: 91A Nguyen Khang St, Yen Hoa, Cau Giay, Hanoi · Manufacturing Site: Lot 41C2 Quang Minh Industrial Park, Me Linh, Hanoi · Technical Helpline: 024.8589.8982</span>
+  </div>
+</footer>
+
+<script>
+// ── SYSTEM ARCHITECTURE: LANGUAGE SWITCHER ──
+function setLang(lang) {
+  document.body.className = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  if(lang === 'vi') {
+    document.getElementById('btnVi').classList.add('active');
+  } else {
+    document.getElementById('btnEn').classList.add('active');
+  }
+  document.documentElement.lang = lang;
+}
+
+// ── UX INTERACTIVE: MOBILE NAVIGATION MENU ──
+function toggleMenu() {
+  const navLinks = document.getElementById('navLinks');
+  const menuToggle = document.getElementById('menuToggle');
+  if (window.innerWidth <= 768) {
+    navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+  }
+}
+
+// ── DATA INTERACTION: TAB SWITCHER MECHANICS ──
+function showTab(event, id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  
+  const targetContent = document.getElementById('tab-' + id);
+  if (targetContent) {
+    targetContent.classList.add('active');
+  }
+  event.currentTarget.classList.add('active');
+}
+
+// ── ANIMATION COMPONENT: NUMERICAL COUNT-UP SYSTEM ──
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-num[data-target], .intro-strip-inner .intro-item-num[data-target]');
+  counters.forEach(counter => {
+    const target = parseFloat(counter.getAttribute('data-target'));
+    const isFloat = counter.getAttribute('data-target').includes('.');
+    let start = 0;
+    const duration = 1500; // milliseconds
+    const increment = target / (duration / 16);
+    
+    const updateCount = () => {
+      start += increment;
+      if (start < target) {
+        counter.innerText = isFloat ? start.toFixed(1) + "M" : Math.floor(start).toLocaleString();
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = isFloat ? target.toFixed(1) + "M" : target.toLocaleString();
+      }
+    };
+    updateCount();
+  });
+}
+
+// ── SCROLL DETECTOR: INTERSECTION OBSERVER FOR REVEAL & COUNT-UP ──
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounters();
+      statsObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+const triggerElement = document.querySelector('.hero-stats');
+if(triggerElement) statsObserver.observe(triggerElement);
+
+// ── DYNAMIC TRACKING: ACTIVE NAVIGATION INDICATOR ──
+const navSections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY + 120;
+  navSections.forEach(sec => {
+    const link = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
+    if (!link) return;
+    if (sec.offsetTop <= currentScrollY && sec.offsetTop + sec.offsetHeight > currentScrollY) {
+      document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '');
+      link.style.color = 'var(--gold-light)';
+    }
+  });
+});
+
+// ── ACTION HANDLER: FORM VALIDATION TRANSMISSION ──
+function submitInquiry() {
+  const name = document.getElementById('formName').value.trim();
+  const phone = document.getElementById('formPhone').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const crop = document.getElementById('formCrop').value;
+  const isVi = document.body.classList.contains('vi');
+
+  if(!name || !phone) {
+    alert(isVi ? "Vui lòng hoàn thành Họ tên và Số điện thoại liên lạc!" : "Please fill in your Name and Contact Phone Number!");
+    return;
+  }
+  
+  // Giả lập xử lý truyền nhận dữ liệu chuyên nghiệp
+  alert(isVi ? `Cảm ơn ${name}! Yêu cầu tư vấn quy trình dinh dưỡng cây ${crop} đã được gửi đến ban kỹ sư GoldTech thành công. Hotline 024.8589.8982 sẽ liên lạc với bạn trong vài phút.` 
+             : `Thank you ${name}! Your professional crop inquiry for ${crop} culture has been successfully routed to GoldTech Agronomists. Our hotline 024.8589.8982 will establish contact shortly.`);
+             
+  // Reset form
+  document.getElementById('formName').value = "";
+  document.getElementById('formPhone').value = "";
+  document.getElementById('formEmail').value = "";
+  document.getElementById('formCrop').value = "";
+  document.getElementById('formMessage').value = "";
+}
+</script>
+</body>
+</html>
